@@ -1,0 +1,10 @@
+[Unit]
+Description=Run network-restarter every minute
+Requires=network-restarter.service
+
+[Timer]
+Unit=network-restarter.service
+OnUnitInactiveSec=1m
+
+[Install]
+WantedBy=timers.target

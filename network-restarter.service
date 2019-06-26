@@ -1,0 +1,10 @@
+[Unit]
+Description=network-restarter
+Wants=network-restarter.timer
+After=network.target
+
+[Service]
+ExecStart=/home/pi/network_restarter/network_restarter.sh -i wlan0 -c 10
+
+[Install]
+WantedBy=multi-user.target
